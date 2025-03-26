@@ -1,95 +1,68 @@
-// src/components/FAQ.jsx
-
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
-const preguntasRespuestas = [
+
+const faqs = [
   {
-    id: 1,
-    pregunta: "¿Necesito experiencia previa para entrenar?",
-    respuesta:
+    question: "¿Necesito experiencia previa para entrenar?",
+    answer:
       "Para nada. Te acompañamos desde cero con rutinas adaptadas. No te hagas drama, todos empezamos alguna vez.",
   },
   {
-    id: 2,
-    pregunta: "¿Se paga matrícula o inscripción?",
-    respuesta:
+    question: "¿Se paga matrícula o inscripción?",
+    answer:
       "No cobramos matrícula, solo el abono mensual. Te damos la flexibilidad de arrancar cuando quieras.",
   },
   {
-    id: 3,
-    pregunta: "¿Hay entrenamientos personalizados?",
-    respuesta:
-      "¡Obvio! Podés coordinar con nuestro entrenador para armar un plan a tu medida o incluso clases one-to-one.",
+    question: "¿Hay entrenamientos personalizados?",
+    answer:
+      "¡Obvio! Podés coordinar con nuestro entrenador para armar un plan a tu medida.",
   },
   {
-    id: 4,
-    pregunta: "¿Qué pasa si no puedo ir todos los días?",
-    respuesta:
+    question: "¿Qué pasa si no puedo ir todos los días?",
+    answer:
       "No pasa nada, podés venir los días que quieras. Eso sí, para progresar, lo ideal es mantener cierta constancia.",
   },
 ];
 
 export const FAQ = () => {
-  const [openId, setOpenId] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleFAQ = (id) => {
-    setOpenId((prev) => (prev === id ? null : id));
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <section className="py-12 bg-black text-white">
-      <div className="container mx-auto px-4">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold text-center mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
-          viewport={{ once: true }}
-        >
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100" id="faq">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           Preguntas Frecuentes
-        </motion.h2>
-
-        <div className="max-w-2xl mx-auto space-y-4">
-          {preguntasRespuestas.map(({ id, pregunta, respuesta }) => {
-            const isOpen = openId === id;
-            return (
-              <div
-                key={id}
-                className="bg-gray-800 rounded-md overflow-hidden"
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="border border-gray-200 rounded-md overflow-hidden"
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full text-left px-4 py-3 bg-gray-100 hover:bg-gray-200 focus:outline-none flex justify-between items-center transition-colors duration-300"
               >
-                {/* Botón de pregunta */}
-                <button
-                  onClick={() => toggleFAQ(id)}
-                  className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-gray-700 focus:outline-none"
-                >
-                  <span className="font-semibold">{pregunta}</span>
-                  {isOpen ? (
-                    <FaChevronUp className="text-red-500" />
-                  ) : (
-                    <FaChevronDown className="text-red-500" />
-                  )}
-                </button>
-
-                {/* Contenido con Fade + Slide */}
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key="content"
-                      className="px-4 pb-4 text-gray-300"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {respuesta}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <span className="text-lg font-medium text-gray-800">
+                  {faq.question}
+                </span>
+                <span className="text-gray-600 text-2xl">
+                  {activeIndex === index ? "−" : "+"}
+                </span>
+              </button>
+              <div
+                className={`px-4 overflow-hidden transition-all duration-500 ${
+                  activeIndex === index ? "max-h-40 py-3" : "max-h-0"
+                }`}
+              >
+                <p className="text-gray-600">{faq.answer}</p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

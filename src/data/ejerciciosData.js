@@ -5,7 +5,7 @@ export const ejerciciosData = [
       id: 1,
       grupo: "Pectorales",
       nombre: "Press de banca",
-      imagen: "https://via.placeholder.com/400x300?text=Press+Banca",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021794/image_7_kqfsq1.jpg",
       descripcion:
         "Ejercicio básico para desarrollar fuerza y masa en los pectorales. Asegúrate de mantener la espalda apoyada en el banco y los pies firmes en el suelo.",
       pasos: [
@@ -18,7 +18,7 @@ export const ejerciciosData = [
       id: 2,
       grupo: "Pectorales",
       nombre: "Aperturas con mancuernas",
-      imagen: "https://via.placeholder.com/400x300?text=Aperturas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021859/image_8_pbjchq.jpg",
       descripcion:
         "Trabaja los pectorales abriendo y cerrando los brazos con mancuernas, manteniendo un ligero ángulo en los codos.",
       pasos: [
@@ -31,7 +31,7 @@ export const ejerciciosData = [
       id: 3,
       grupo: "Pectorales",
       nombre: "Press inclinado",
-      imagen: "https://via.placeholder.com/400x300?text=Press+Inclinado",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021902/image_9_pks0xs.jpg",
       descripcion:
         "Variante del press para enfocar la parte superior del pecho. Ajusta el banco a un ángulo de 30-45 grados.",
       pasos: [
@@ -46,7 +46,7 @@ export const ejerciciosData = [
       id: 4,
       grupo: "Espalda",
       nombre: "Dominadas",
-      imagen: "https://via.placeholder.com/400x300?text=Dominadas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021934/image_10_vnvyxk.jpg",
       descripcion:
         "Uno de los mejores ejercicios para trabajar dorsales y la parte alta de la espalda, usando el peso corporal.",
       pasos: [
@@ -59,7 +59,7 @@ export const ejerciciosData = [
       id: 5,
       grupo: "Espalda",
       nombre: "Remo con barra",
-      imagen: "https://via.placeholder.com/400x300?text=Remo+Con+Barra",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021978/image_11_jvd6ir.jpg",
       descripcion:
         "Gran ejercicio para engrosar la espalda media. Mantén la espalda recta y no curves la zona lumbar.",
       pasos: [
@@ -72,7 +72,7 @@ export const ejerciciosData = [
       id: 6,
       grupo: "Espalda",
       nombre: "Peso muerto",
-      imagen: "https://via.placeholder.com/400x300?text=Peso+Muerto",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022032/image_12_mzfuid.jpg",
       descripcion:
         "Ejercicio compuesto que trabaja la cadena posterior: espalda, glúteos, femorales. Técnica adecuada es clave.",
       pasos: [
@@ -87,7 +87,7 @@ export const ejerciciosData = [
       id: 7,
       grupo: "Piernas",
       nombre: "Sentadillas",
-      imagen: "https://via.placeholder.com/400x300?text=Sentadillas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022075/image_13_nfpel2.jpg",
       descripcion:
         "Ejercicio rey de piernas, trabaja cuadriceps, glúteos y core. Mantén la espalda recta y las rodillas alineadas.",
       pasos: [
@@ -100,7 +100,7 @@ export const ejerciciosData = [
       id: 8,
       grupo: "Piernas",
       nombre: "Prensa de piernas",
-      imagen: "https://via.placeholder.com/400x300?text=Prensa+Piernas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022122/image_14_gq38em.jpg",
       descripcion:
         "Ejercicio guiado que permite mover cargas pesadas en los cuadriceps.",
       pasos: [
@@ -113,7 +113,7 @@ export const ejerciciosData = [
       id: 9,
       grupo: "Piernas",
       nombre: "Zancadas",
-      imagen: "https://via.placeholder.com/400x300?text=Zancadas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022205/image_15_uowtji.jpg",
       descripcion:
         "Movimiento unilateral para trabajar glúteos, cuadriceps y coordinación.",
       pasos: [
@@ -128,7 +128,7 @@ export const ejerciciosData = [
       id: 10,
       grupo: "Hombros",
       nombre: "Press militar",
-      imagen: "https://via.placeholder.com/400x300?text=Press+Militar",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022260/image_16_cpifsx.jpg",
       descripcion:
         "Focaliza la parte frontal y lateral del hombro, además del trapecio superior.",
       pasos: [
@@ -141,7 +141,7 @@ export const ejerciciosData = [
       id: 11,
       grupo: "Hombros",
       nombre: "Elevaciones laterales",
-      imagen: "https://via.placeholder.com/400x300?text=Elevaciones+Laterales",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022332/image_17_hdnq41.jpg",
       descripcion:
         "Enfocado en la porción lateral del hombro. Usa mancuernas ligeras para no balancear el cuerpo.",
       pasos: [
@@ -154,7 +154,7 @@ export const ejerciciosData = [
       id: 12,
       grupo: "Hombros",
       nombre: "Face pulls",
-      imagen: "https://via.placeholder.com/400x300?text=Face+Pulls",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022374/image_18_r8hv2w.jpg",
       descripcion:
         "Ayuda a la salud del hombro y a trabajar la parte trasera. Se realiza en polea con cuerda.",
       pasos: [
@@ -169,7 +169,7 @@ export const ejerciciosData = [
       id: 13,
       grupo: "Bíceps",
       nombre: "Curl con barra",
-      imagen: "https://via.placeholder.com/400x300?text=Curl+Barra",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022709/image_25_l11p49.jpg",
       descripcion:
         "Ejercicio básico para el bíceps braquial. Mantén los codos pegados al cuerpo.",
       pasos: [
@@ -182,7 +182,7 @@ export const ejerciciosData = [
       id: 14,
       grupo: "Bíceps",
       nombre: "Curl con mancuernas",
-      imagen: "https://via.placeholder.com/400x300?text=Curl+Mancuernas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021675/image_4_hsrtyy.jpg",
       descripcion:
         "Variante unilateral o alternada para mayor control y simetría.",
       pasos: [
@@ -195,7 +195,7 @@ export const ejerciciosData = [
       id: 15,
       grupo: "Bíceps",
       nombre: "Curl martillo",
-      imagen: "https://via.placeholder.com/400x300?text=Curl+Martillo",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022426/image_19_lt1ltv.jpg",
       descripcion:
         "Enfoca la cara externa del bíceps y braquiorradial. Sostén las mancuernas con agarre neutro.",
       pasos: [
@@ -210,7 +210,7 @@ export const ejerciciosData = [
       id: 16,
       grupo: "Tríceps",
       nombre: "Extensión de tríceps en polea",
-      imagen: "https://via.placeholder.com/400x300?text=Extension+Polea",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021716/image_5_roxqck.jpg",
       descripcion:
         "Ideal para aislar el tríceps. Mantén los codos pegados y evita mover los hombros.",
       pasos: [
@@ -223,7 +223,7 @@ export const ejerciciosData = [
       id: 17,
       grupo: "Tríceps",
       nombre: "Press francés",
-      imagen: "https://via.placeholder.com/400x300?text=Press+Franc%C3%A9s",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022476/image_20_ywqngc.jpg",
       descripcion:
         "Se realiza con barra Z o mancuernas, acostado en un banco. Trabaja la cabeza larga del tríceps.",
       pasos: [
@@ -236,7 +236,7 @@ export const ejerciciosData = [
       id: 18,
       grupo: "Tríceps",
       nombre: "Fondos en barras paralelas",
-      imagen: "https://via.placeholder.com/400x300?text=Fondos+Triceps",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022527/image_21_pxmgmt.jpg",
       descripcion:
         "Gran ejercicio para la parte posterior del brazo y pecho inferior.",
       pasos: [
@@ -251,7 +251,7 @@ export const ejerciciosData = [
       id: 19,
       grupo: "Abdominales",
       nombre: "Crunch",
-      imagen: "https://via.placeholder.com/400x300?text=Crunch",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022567/image_22_vuca5n.jpg",
       descripcion:
         "Ejercicio básico de abdomen, enfatiza la parte superior del recto abdominal.",
       pasos: [
@@ -264,7 +264,7 @@ export const ejerciciosData = [
       id: 20,
       grupo: "Abdominales",
       nombre: "Plancha",
-      imagen: "https://via.placeholder.com/400x300?text=Plancha",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022595/image_23_kr0q0k.jpg",
       descripcion:
         "Isométrico para fortalecer todo el core, manteniendo el cuerpo recto.",
       pasos: [
@@ -277,7 +277,7 @@ export const ejerciciosData = [
       id: 21,
       grupo: "Abdominales",
       nombre: "Elevaciones de piernas colgado",
-      imagen: "https://via.placeholder.com/400x300?text=Elevacion+Piernas",
+      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022635/image_24_ykfiuc.jpg",
       descripcion:
         "Enfoca la parte inferior del recto abdominal. Requiere fuerza de agarre y control del core.",
       pasos: [

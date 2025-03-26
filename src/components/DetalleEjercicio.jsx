@@ -1,9 +1,15 @@
-// src/pages/DetalleEjercicio.jsx
+import { useEffect } from "react";
+
 import { motion } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ejerciciosData } from "../data/ejerciciosData";
 
 export const DetalleEjercicio = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { grupo, id } = useParams();
   const ejercicio = ejerciciosData.find((ej) => ej.id === parseInt(id));
 

@@ -1,9 +1,15 @@
-// src/pages/EjerciciosPorGrupo.jsx
+import { useEffect } from "react";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { useParams, Link } from "react-router-dom";
 import { ejerciciosData } from "../data/ejerciciosData";
 
 export const EjerciciosPorGrupo = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { grupo } = useParams();
   // Filtramos ejercicios para este grupo
   const ejerciciosFiltrados = ejerciciosData.filter(
@@ -21,7 +27,7 @@ export const EjerciciosPorGrupo = () => {
 
   return (
     <motion.div
-      className="px-4 py-8 bg-black min-h-screen text-white"
+      className="px-4 py-20 bg-black min-h-screen text-white"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}

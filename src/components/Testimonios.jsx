@@ -47,56 +47,50 @@ export const Testimonios = () => {
   const { nombre, foto, comentario, calificacion } = testimoniosData[currentIndex];
 
   return (
-    <section className="py-12 bg-black text-white">
+    <section className="py-12 bg-white text-gray-800">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-10">Testimonios</h2>
 
-        {/* Contenedor del testimonio con animación de transición */}
         <div className="relative max-w-xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentIndex} // clave para forzar animación al cambiar de testimonio
+              key={currentIndex} 
               className="flex flex-col items-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              {/* Foto */}
               <img
                 src={foto}
                 alt={nombre}
-                className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-red-500"
+                className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-black"
               />
 
-              {/* Nombre */}
               <h3 className="text-xl font-semibold mb-2">{nombre}</h3>
 
-              {/* Calificación con estrellitas */}
               <div className="flex justify-center mb-4">
                 {[...Array(calificacion)].map((_, i) => (
-                  <FaStar key={i} className="text-red-500 mx-1" />
+                  <FaStar key={i} className="text-yellow-400 mx-1" />
                 ))}
               </div>
 
-              {/* Comentario */}
-              <p className="text-gray-300 mb-4 px-4 italic whitespace-pre-line">
+              <p className="text-gray-600 mb-4 px-4 italic whitespace-pre-line">
                 {comentario}
               </p>
             </motion.div>
           </AnimatePresence>
 
-          {/* Botones de navegación */}
           <div className="flex justify-center space-x-4 mt-6">
             <button
               onClick={handlePrev}
-              className="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded transition-colors"
+              className="border-2 border-gray-700 text-gray-800 hover:bg-gray-800 hover:text-white px-4 py-2 rounded transition-colors cursor-pointer"
             >
               Anterior
             </button>
             <button
               onClick={handleNext}
-              className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition-colors"
+              className="border-2 border-gray-700 text-gray-800 hover:bg-gray-800 hover:text-white px-4 py-2 rounded transition-colors cursor-pointer"
             >
               Siguiente
             </button>

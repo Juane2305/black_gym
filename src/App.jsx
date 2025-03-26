@@ -4,16 +4,15 @@ import { EjerciciosPorGrupo } from "./components/EjerciciosPorGrupo";
 import { DetalleEjercicio } from "./components/DetalleEjercicio";
 import { Footer } from "./components/Footer";
 import { Main } from "./views/Main";
+import WhatsAppFloatingButton from "./components/WhatsappFloatingButton";
 
 function App() {
   return (
     <Router>
+      <WhatsAppFloatingButton/>
       <Routes>
         <Route path="/" element={<Main/>}/>
-        {/* Ejercicios por grupo: /ejercicios/pectoral, /ejercicios/espalda, etc. */}
         <Route path="/ejercicios/:grupo" element={<EjerciciosPorGrupo />} />
-
-        {/* Detalle de ejercicio: /ejercicios/espalda/5 por ejemplo */}
         <Route path="/ejercicios/:grupo/:id" element={<DetalleEjercicio />} />
       </Routes>
       <Footer/>

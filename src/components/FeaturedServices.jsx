@@ -9,14 +9,14 @@ export const FeaturedServices = () => {
       title: "Área de Pesas y Máquinas",
       icon: <FaDumbbell className="text-red-500 text-4xl mb-2" />,
       description:
-        "Encuentra variedad de máquinas de musculación y zona de peso libre para trabajar cada grupo muscular.",
+        "Encuentra variedad de máquinas de musculación para trabajar cada grupo muscular.",
     },
     {
       id: 2,
       title: "Zona de Cardio",
       icon: <FaHeartbeat className="text-red-500 text-4xl mb-2" />,
       description:
-        "Cintas de correr, elípticas y bicicletas en un espacio amplio y ventilado para mejorar tu resistencia.",
+        "Cintas de correr y bicicletas en un espacio amplio y ventilado para mejorar tu resistencia.",
     },
     {
       id: 3,

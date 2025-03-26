@@ -10,7 +10,7 @@ import { FAQ } from "../components/FAQ";
 
 export const Main = () => {
   return (
-    <>
+    <div className="overflow-hidden">
         <Header />
       <HeroParallax/>
       <FeaturedServices/>
@@ -20,6 +20,6 @@ export const Main = () => {
       <Testimonios/>
       <UbicacionHorarios/>
       <FAQ/>
-    </>
+    </div>
   )
 }
