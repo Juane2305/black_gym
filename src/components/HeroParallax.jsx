@@ -4,19 +4,23 @@ import { motion } from "framer-motion";
 export const HeroParallax = () => {
   return (
     <section
-      className="
-        relative 
-        h-screen 
-        w-full 
-        flex 
-        items-center 
-        justify-center 
-        bg-cover 
-        bg-center
-        bg-url['https://res.cloudinary.com/dfschbyq2/image/upload/v1738019955/ceb61aaf-8610-4d23-8492-249da80dd730_tin73s.jpg']"
-    >
+  style={{
+    backgroundImage: "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1738019955/ceb61aaf-8610-4d23-8492-249da80dd730_tin73s.jpg')"
+  }}
+  className="
+    relative 
+    h-screen 
+    w-full 
+    flex 
+    items-center 
+    justify-center 
+    bg-cover 
+    bg-center
+    z-40
+  "
+>
       {/* Oscurecemos un poco la imagen si lo deseas */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 opacity-60 bg-black"></div>
 
       <motion.div
         className="relative z-10 text-center px-4 max-w-3xl"
