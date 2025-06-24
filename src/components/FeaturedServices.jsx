@@ -20,7 +20,7 @@ export const FeaturedServices = () => {
     },
     {
       id: 3,
-      title: "Entrenamiento Personalizado",
+      title: "Apoyo Constante",
       icon: <FaUserTie className="text-red-500 text-4xl mb-2" />,
       description:
         "Recibe asesoría y planes de entrenamiento adaptados a tus objetivos, con la guía de nuestros instructores.",

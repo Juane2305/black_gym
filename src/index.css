@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+*{
+    scroll-behavior: smooth;
+}
+
+@layer utilities {
+    .bg-mobile-bg {
+      background-image: url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750782182/IMG_5883_l0nhlm.webp');
+    }
+  
+    .bg-desktop-bg {
+        background-image: url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750781583/IMG_5878_zd4vha.webp');
+    }
+}

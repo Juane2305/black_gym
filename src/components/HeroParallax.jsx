@@ -1,71 +1,69 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export const HeroParallax = () => {
+  const [bgImage, setBgImage] = useState("");
+
+  useEffect(() => {
+    const updateBg = () => {
+      const isDesktop = window.innerWidth >= 768;
+      setBgImage(
+        isDesktop
+          ? "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750781583/IMG_5878_zd4vha.webp')" // desktop
+          : "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750782182/IMG_5883_l0nhlm.webp')" // mobile
+      );
+    };
+
+    updateBg();
+    window.addEventListener("resize", updateBg);
+    return () => window.removeEventListener("resize", updateBg);
+  }, []);
+
   return (
     <section
-  style={{
-    backgroundImage: "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1738019955/ceb61aaf-8610-4d23-8492-249da80dd730_tin73s.jpg')"
-  }}
-  className="
-    relative 
-    h-screen 
-    w-full 
-    flex 
-    items-center 
-    justify-center 
-    bg-cover 
-    bg-center
-    z-40
-  "
->
-      {/* Oscurecemos un poco la imagen si lo deseas */}
-      <div className="absolute inset-0 opacity-60 bg-black"></div>
-
+      style={{ backgroundImage: bgImage }}
+      className="
+        relative 
+        h-screen 
+        w-full 
+        flex 
+        items-end 
+        justify-center 
+        bg-cover 
+        bg-center
+        z-40
+      "
+    >
+      <div className="absolute inset-0 opacity-25 bg-black" />
       <motion.div
         className="relative z-10 text-center px-4 max-w-3xl"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <motion.h1
-          className="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          Descubrí <span className="">BLACK GYM</span>
-        </motion.h1>
-
-        <motion.p
-          className="text-gray-300 text-lg md:text-xl mb-8"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          ¡Eleva tu entrenamiento y empuja tus límites con nuestra 
-          comunidad de atletas!
-        </motion.p>
-
         <motion.a
-          href="#planes"
+          href="/precios"
           className="
             inline-block 
-            bg-gray-600 
-            hover:bg-gray-700 
-            text-white 
+            border
+            border-white
+            hover:bg-white
+            hover:text-gray-800
+            text-white
+            text-lg
             font-semibold 
-            py-3 
-            px-8 
+            py-5 
+            px-10 
             rounded 
             shadow-lg 
             transition-colors 
             duration-300
+            mb-20
           "
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Comienza Hoy
+          Ver planes
         </motion.a>
       </motion.div>
     </section>

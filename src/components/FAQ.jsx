@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "¿Se paga matrícula o inscripción?",
     answer:
-      "No cobramos matrícula, solo el abono mensual. Te damos la flexibilidad de arrancar cuando quieras.",
+      "Si, se paga inscripción, podes revisar los precios en su sección. Te damos la flexibilidad de arrancar cuando quieras.",
   },
   {
     question: "¿Hay entrenamientos personalizados?",
@@ -32,7 +32,7 @@ export const FAQ = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100" id="faq">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100" id="preguntas">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
           Preguntas Frecuentes

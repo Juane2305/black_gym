@@ -7,7 +7,7 @@ export const Testimonios = () => {
   const testimoniosData = [
     {
       id: 1,
-      nombre: "Juan Pérez",
+      nombre: "Juan",
       foto: "https://res.cloudinary.com/dfschbyq2/image/upload/v1735861226/Dise%C3%B1o_sin_t%C3%ADtulo_8_y8tpzg.jpg", // Reemplazá con una foto real
       comentario: `La verdad que es un golazo entrenar acá. 
       Las máquinas son nuevas y de primer nivel y la gente que trabaja es muy predispuesta.`,
@@ -15,7 +15,7 @@ export const Testimonios = () => {
     },
     {
       id: 2,
-      nombre: "Mariana Álvarez",
+      nombre: "Mariana",
       foto: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738019296/a49d9907-8ce2-449b-a3ee-054e2e9da814_w5i1dn.jpg",
       comentario: `El ambiente es súper copado y los profes te dan una mano en todo. 
       ¡Recomiendo al 100%!`,
@@ -23,7 +23,7 @@ export const Testimonios = () => {
     },
     {
       id: 3,
-      nombre: "Lucas Fernandez",
+      nombre: "Lucas",
       foto: "https://res.cloudinary.com/dfschbyq2/image/upload/v1735517083/f8ef60b3-e9dd-4dce-bc3c-6ba4a6adc9da.png",
       comentario: `Está bárbaro el gimnasio. 
       Antes iba a otro pero no tenía tantas opciones. 
@@ -55,19 +55,13 @@ export const Testimonios = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex} 
-              className="flex flex-col items-center"
+              className="flex flex-col items-center h-[13rem] md:h-[10rem]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              <img
-                src={foto}
-                alt={nombre}
-                className="w-20 h-20 rounded-full mb-4 object-cover border-2 border-black"
-              />
-
-              <h3 className="text-xl font-semibold mb-2">{nombre}</h3>
+              <h3 className="text-xl  mb-2 text-gray-600">{nombre}</h3>
 
               <div className="flex justify-center mb-4">
                 {[...Array(calificacion)].map((_, i) => (

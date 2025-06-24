@@ -10,23 +10,22 @@ export const Header = () => {
   };
 
   return (
-    <header className="bg-black text-white py-4 px-6 md:px-10 flex justify-between items-center relative z-50">
-      {/* Logo */}
-      <img src={logo} alt="Logo" className=" w-auto size-20" />
-
-      {/* Menú en Desktop */}
+    <header className="bg-black w-full text-white py-4 px-6 md:px-10 flex justify-between items-center z-50 fixed">
+      <a href="/">
+        <img src={logo} alt="Logo" className=" w-auto size-20" />
+      </a>
       <nav className="hidden md:flex space-x-8 font-semibold text-lg">
-        <a href="#ubicacion" className="hover:text-gray-300 transition-colors">
+        <a href="/#ubicacion" className="hover:text-gray-300 transition-colors">
           Ubicación
         </a>
-        <a href="#ejercicios" className="hover:text-gray-300 transition-colors">
+        <a href="/#ejercicios" className="hover:text-gray-300 transition-colors">
           Ejercicios
         </a>
-        <a href="#preguntas" className="hover:text-gray-300 transition-colors">
+        <a href="/#preguntas" className="hover:text-gray-300 transition-colors">
           Preguntas Frecuentes
         </a>
-        <a href="#contacto" className="hover:text-gray-300 transition-colors">
-          Contacto
+        <a href="/precios" className="hover:text-gray-300 transition-colors">
+          Precios
         </a>
       </nav>
 
@@ -78,32 +77,32 @@ export const Header = () => {
           >
             <nav className="flex flex-col space-y-6 text-lg font-semibold text-center">
               <a
-                href="#ubicacion"
+                href="/#ubicacion"
                 className="hover:text-gray-300 transition-colors"
                 onClick={toggleMenu}
               >
                 Ubicación
               </a>
               <a
-                href="#ejercicios"
+                href="/#ejercicios"
                 className="hover:text-gray-300 transition-colors"
                 onClick={toggleMenu}
               >
                 Ejercicios
               </a>
               <a
-                href="#preguntas"
+                href="/#preguntas"
                 className="hover:text-gray-300 transition-colors"
                 onClick={toggleMenu}
               >
                 Preguntas Frecuentes
               </a>
               <a
-                href="#contacto"
+                href="/precios"
                 className="hover:text-gray-300 transition-colors"
                 onClick={toggleMenu}
               >
-                Contacto
+                Precios
               </a>
             </nav>
           </motion.div>

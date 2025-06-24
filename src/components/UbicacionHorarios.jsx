@@ -3,7 +3,7 @@ import { FaClock } from "react-icons/fa";
 
 export const UbicacionHorarios = () => {
   return (
-    <section className="py-12 bg-black text-white">
+    <section className="py-12 bg-black text-white" id="ubicacion">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-8"
@@ -59,8 +59,8 @@ export const UbicacionHorarios = () => {
               {/* Sábado */}
               <div className="bg-gray-800 p-4 rounded-md shadow-md flex items-center justify-between hover:bg-gray-700 transition-colors">
                 <div>
-                  <h4 className="text-lg font-bold mb-1">Sábado</h4>
-                  <p className="text-gray-300">09:00 - 14:00</p>
+                  <h4 className="text-lg font-bold mb-1">Sábados y Feriados</h4>
+                  <p className="text-gray-300">09:00 - 16:00</p>
                 </div>
                 <FaClock className="text-red-500 text-2xl" />
               </div>

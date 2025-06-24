@@ -1,45 +1,42 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Fotos de ejemplo (sacadas de Unsplash, enfocadas en gimnasio/fitness)
 const IMAGES = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738028160/matthew-sichkaruk-3qZt1MwF4Zo-unsplash_xfqpve_1_ckymtn.jpg",
+    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1747778328/IMG_6623_1_amtxem.jpg",
     alt: "Zona de peso libre",
   },
   {
     id: 2,
-    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738028218/sushil-ghimire-DC5akQJyH4I-unsplash_1_rivvqt.jpg",
+    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1747778239/IMG_6609_jvxc3f.jpg",
     alt: "Bicicletas y cintas de correr",
   },
   {
     id: 3,
-    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738028256/eduardo-cano-photo-co-AzX5iNFYBMY-unsplash_jzkfjf_1_tszove.jpg",
-    alt: "Atleta entrenando hombros",
+    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1747778279/IMG_6610_1_ejce1v.jpg",
+    alt: "Cintas de correr",
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738028299/mohamed-fareed-rbSNsoXk-3A-unsplash_ubxpfd_1_eewpjr.jpg",
+    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1747778301/IMG_6615_phatef.jpg",
     alt: "Máquinas de musculación",
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738028339/samuel-girven-2e4lbLTqPIo-unsplash_ufdaa2_1_ubwncg.jpg",
-    alt: "Vista general del gimnasio",
+    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1747778368/IMG_6636_gx3sgw.jpg",
+    alt: "Pesas y barras en rack",
   },
   {
     id: 6,
-    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1738028385/danielle-cerullo-CQfNt66ttZM-unsplash_wtcgwx_1_nap0co.jpg",
-    alt: "Pesas y barras en rack",
+    src: "https://res.cloudinary.com/dfschbyq2/image/upload/v1747778348/IMG_6633_yslfyh.jpg",
+    alt: "Prensa de piernas",
   },
 ];
 
 export const Galeria = () => {
-  // State para controlar la foto seleccionada en el modal
   const [selectedImg, setSelectedImg] = useState(null);
 
-  // Manejo de selección/deselección de imagen
   const handleOpen = (image) => {
     setSelectedImg(image);
   };
@@ -61,7 +58,6 @@ export const Galeria = () => {
           Galería de Fotos
         </motion.h2>
 
-        {/* Grilla de fotos */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {IMAGES.map((img, index) => (
             <motion.div
@@ -77,18 +73,15 @@ export const Galeria = () => {
                 src={img.src}
                 alt={img.alt}
                 className="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-300"
-                // Efecto de zoom al hover
               />
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Modal / Lightbox */}
       <AnimatePresence>
         {selectedImg && (
           <>
-            {/* Fondo oscuro */}
             <motion.div
               className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
               initial={{ opacity: 0 }}
@@ -97,7 +90,6 @@ export const Galeria = () => {
               transition={{ duration: 0.5 }}
               onClick={handleClose}
             >
-              {/* Imagen central */}
               <motion.img
                 src={selectedImg.src}
                 alt={selectedImg.alt}
@@ -106,7 +98,6 @@ export const Galeria = () => {
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.5, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                // Cierro el modal al hacer click en el fondo
               />
             </motion.div>
           </>

@@ -35,7 +35,7 @@ export const GruposMusculares = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="text-4xl font-bold mb-12 text-center">Ejercicios</h1>
+      <h1 id="ejercicios" className="text-4xl font-bold mb-12 text-center">Ejercicios</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {gruposUnicos.map((grupo) => (
