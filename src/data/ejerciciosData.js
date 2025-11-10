@@ -1,290 +1,657 @@
+export const maquinas = [
+  { id: "rack-sentadillas", nombre: "Rack de sentadillas", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787258/1_vfci9a.jpg" },
+  { id: "barra-olimpica", nombre: "Barra olímpica", img:"" },
+  { id: "maquina-smith", nombre: "Máquina Smith", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787259/5_jgerqo.jpg" },
+  { id: "banco-olimpico", nombre: "Banco Olímpico", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787267/2_hepaoi.jpg" },
+  { id: "banco-inclinado", nombre: "Banco Inclinado", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787262/11_ge7ilg.jpg" },
+  { id: "banco-scott", nombre: "Banco Scott", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787261/10_zly57i.jpg" },
+  { id: "prensa-45", nombre: "Prensa 45º", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787258/3_ihldyg.jpg" },
+  { id: "maquina-gemelos", nombre: "Máquina Gemelos", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787267/22_tjht5a.jpg" },
+  { id: "mancuernas", nombre: "Mancuernas", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787263/13_uwm4b5.jpg" },
+  { id: "maquina-fondos", nombre: "Máquina Fondos", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787260/8_y9zd9f.jpg" },
+  { id: "polea-alta", nombre: "Polea Alta", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787259/6_bxrvuk.jpg" },
+  { id: "cardio", nombre: "Cardio", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787266/18_pw1v4j.jpg" },
+  { id: "maquina-aductores", nombre: "Máquina Aductores", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787266/19_t1oe7b.jpg" },
+  { id: "barra", nombre: "Barra", img:"" },
+  { id: "poleas", nombre: "Poleas", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787263/14_ysfyoc.jpg" },
+  { id: "maquina-femorales", nombre: "Máquina Femorales", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787267/21_tiopv6.jpg" },
+  { id: "banco-declinado", nombre: "Banco Declinado", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787265/15_zp0kgj.jpg" },
+  { id: "banco-olimpico-inclinado", nombre: "Banco Olímpico Inclinado", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787260/7_ehdbr1.jpg" },
+  { id: "cinta", nombre: "Cinta", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787265/17_dxeses.jpg" },
+  { id: "polea-baja", nombre: "Polea Baja", img:"" },
+  { id: "banco-lumbar", nombre: "Banco Lumbar", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787264/16_k3pn6w.jpg" },
+  { id: "suelo", nombre: "Suelo", img:"" },
+  { id: "silla-cuadriceps", nombre: "Silla de Cuádriceps", img:"https://res.cloudinary.com/dfschbyq2/image/upload/v1762787266/20_csrke3.jpg" },
+];
 
-export const ejerciciosData = [
-    // Pectorales
+export const ejerciciosData = {
+  "rack-sentadillas": [
     {
       id: 1,
-      grupo: "Pectorales",
-      nombre: "Press de banca",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021794/image_7_kqfsq1.jpg",
-      descripcion:
-        "Ejercicio básico para desarrollar fuerza y masa en los pectorales. Asegúrate de mantener la espalda apoyada en el banco y los pies firmes en el suelo.",
+      nombre: "Sentadilla sumo",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787219/SENTADILLA_SUMO_mmw1re.mp4",
+      descripcion: "Ejercicio para piernas y glúteos con énfasis en aductores. Postura abierta y espalda firme para bajar con control.",
+      imagen: "https://res.cloudinary.com/dfschbyq2/video/upload/so_1/v1762787219/SENTADILLA_SUMO_mmw1re.jpg",
       pasos: [
-        "Acuéstate en el banco con la barra a la altura de los ojos.",
-        "Toma la barra con un agarre ligeramente más ancho que los hombros.",
-        "Baja la barra lentamente hasta el pecho y luego empuja con fuerza hacia arriba.",
-      ],
+        "Abrí el ancho de piernas más que tus hombros y apuntá los pies hacia afuera.",
+        "Activá el core y mantené la espalda recta.",
+        "Bajá llevando la cola hacia atrás y abajo.",
+        "Llegá hasta que tus caderas bajen al nivel de las rodillas.",
+        "Subí empujando con talones, sin cerrar rodillas."
+      ]
     },
     {
       id: 2,
-      grupo: "Pectorales",
-      nombre: "Aperturas con mancuernas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021859/image_8_pbjchq.jpg",
-      descripcion:
-        "Trabaja los pectorales abriendo y cerrando los brazos con mancuernas, manteniendo un ligero ángulo en los codos.",
+      nombre: "Sentadilla libre con barra olímpica",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787268/SENTADILLA_LIBRE_CON_BARRA_OLIMPICA_vtkb3l.mp4",
+      descripcion: "La sentadilla clásica para piernas y glúteos, enfocada en fuerza y estabilidad profunda.",
+      imagen: "https://res.cloudinary.com/dfschbyq2/video/upload/so_1/v1762787268/SENTADILLA_LIBRE_CON_BARRA_OLIMPICA_vtkb3l.jpg",
       pasos: [
-        "Recuéstate en un banco plano con mancuernas en mano.",
-        "Abre los brazos en cruz sin bloquear los codos.",
-        "Cierra los brazos hasta la posición inicial, sintiendo la contracción del pecho.",
-      ],
+        "Ubicá la barra sobre la parte alta de la espalda (no en el cuello).",
+        "Pies al ancho de hombros, punta de pies levemente hacia afuera.",
+        "Activá abdomen y mantené torso firme.",
+        "Bajá flexionando cadera y rodillas al mismo tiempo.",
+        "Subí empujando con talones y manteniendo la espalda recta."
+      ]
     },
+  ],
+  "barra-olimpica": [
     {
       id: 3,
-      grupo: "Pectorales",
-      nombre: "Press inclinado",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021902/image_9_pks0xs.jpg",
-      descripcion:
-        "Variante del press para enfocar la parte superior del pecho. Ajusta el banco a un ángulo de 30-45 grados.",
+      nombre: "Peso muerto con barra",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787288/PESO_MUERTO_CON_BARRA_fmj5eu.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Siéntate y apoya la espalda en el banco inclinado.",
-        "Sujeta la barra o mancuernas al nivel del pecho superior.",
-        "Empuja hacia arriba de forma controlada.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
-  
-    // Espalda
     {
       id: 4,
-      grupo: "Espalda",
-      nombre: "Dominadas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021934/image_10_vnvyxk.jpg",
-      descripcion:
-        "Uno de los mejores ejercicios para trabajar dorsales y la parte alta de la espalda, usando el peso corporal.",
+      nombre: "Remo con barra olímpica",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787237/REMO_CON_BARRA_OLIMPICA_yh0tk5.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Sujeta la barra de dominadas con las palmas mirando hacia fuera.",
-        "Comienza colgado con los brazos estirados.",
-        "Eleva el cuerpo hasta que la barbilla pase la barra, luego baja lentamente.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 5,
-      grupo: "Espalda",
-      nombre: "Remo con barra",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021978/image_11_jvd6ir.jpg",
-      descripcion:
-        "Gran ejercicio para engrosar la espalda media. Mantén la espalda recta y no curves la zona lumbar.",
+      id: 24,
+      nombre: "Hip Thrust con barra",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787288/HIP_TRUST_CON_BARRA_cbdayg.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Sujeta la barra con un agarre medio o pronado.",
-        "Inclínate hacia delante con la espalda recta.",
-        "Lleva la barra hacia el abdomen y regresa con control.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+    {
+      id: 29,
+      nombre: "Peso muerto",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787288/PESO_MUERTO_CON_BARRA_fmj5eu.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "maquina-smith": [
+    {
+      id: 5,
+      nombre: "Sentadilla en máquina Smith",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787277/SENTADILLA_EN_MA%CC%81QUINA_SMITH_ljhjof.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
       id: 6,
-      grupo: "Espalda",
-      nombre: "Peso muerto",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022032/image_12_mzfuid.jpg",
-      descripcion:
-        "Ejercicio compuesto que trabaja la cadena posterior: espalda, glúteos, femorales. Técnica adecuada es clave.",
+      nombre: "Press pecho plano Smith",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787284/PRESS_DE_PECHO_PLANO_EN_MA%CC%81QUINA_SMITH_s7n2ox.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Coloca los pies a la anchura de tus hombros, barra cerca de las espinillas.",
-        "Mantén la espalda neutra y baja las caderas.",
-        "Eleva la barra extendiendo las caderas y rodillas simultáneamente.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
-  
-    // Piernas
+  ],
+  "banco-olimpico": [
     {
       id: 7,
-      grupo: "Piernas",
-      nombre: "Sentadillas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022075/image_13_nfpel2.jpg",
-      descripcion:
-        "Ejercicio rey de piernas, trabaja cuadriceps, glúteos y core. Mantén la espalda recta y las rodillas alineadas.",
+      nombre: "Press pecho plano en banco olímpico",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787280/PRESS_DE_PECHO_PLANO_EN_BANCO_OLIMPICO_zzhynq.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Coloca la barra sobre los trapecios (o brazos al frente si es sentadilla frontal).",
-        "Desciende flexionando rodillas y caderas.",
-        "Empuja hacia arriba hasta la posición inicial.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
+  ],
+  "banco-inclinado": [
     {
       id: 8,
-      grupo: "Piernas",
-      nombre: "Prensa de piernas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022122/image_14_gq38em.jpg",
-      descripcion:
-        "Ejercicio guiado que permite mover cargas pesadas en los cuadriceps.",
+      nombre: "Pecho inclinado con mancuernas",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787282/PECHO_EN_BANCO_INCLINADO_CON_MANCUERNAS_gobffe.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Siéntate en la máquina de prensa con la espalda apoyada.",
-        "Coloca los pies a la anchura de los hombros en la plataforma.",
-        "Empuja la plataforma alejándola y regresa con control sin bloquear las rodillas.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "banco-scott": [
+    {
+      id: 25,
+      nombre: "Curl bíceps banco Scott con barra Z",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787289/CURL_DE_BI%CC%81CEPS_EN_BANCO_SCOTT_CON_BARRA_Z_tvgjzs.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "prensa-45": [
+    {
+      id: 26,
+      nombre: "Gemelos en prensa 45",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787286/PRENSA_45_GEMELOS_okrch1.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 9,
-      grupo: "Piernas",
-      nombre: "Zancadas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022205/image_15_uowtji.jpg",
-      descripcion:
-        "Movimiento unilateral para trabajar glúteos, cuadriceps y coordinación.",
+      id: 55,
+      nombre: "Prensa cuadríceps",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787282/PRENSA_45_CUADRICEPS_jvpobl.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Da un paso amplio hacia delante.",
-        "Flexiona la rodilla delantera y baja la trasera casi al suelo.",
-        "Regresa a la posición inicial y alterna piernas.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
-  
-    // Hombros
+  ],
+  "maquina-gemelos": [
     {
-      id: 10,
-      grupo: "Hombros",
-      nombre: "Press militar",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022260/image_16_cpifsx.jpg",
-      descripcion:
-        "Focaliza la parte frontal y lateral del hombro, además del trapecio superior.",
+      id: 27,
+      nombre: "Gemelos parado en máquina",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787289/GEMELOS_PARADO_EN_MAQUINA_q7b9ok.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "De pie con la barra a la altura de la clavícula.",
-        "Sujeta con un agarre un poco más ancho que los hombros.",
-        "Empuja la barra hacia arriba bloqueando los brazos.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
+  ],
+  mancuernas: [
     {
-      id: 11,
-      grupo: "Hombros",
-      nombre: "Elevaciones laterales",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022332/image_17_hdnq41.jpg",
-      descripcion:
-        "Enfocado en la porción lateral del hombro. Usa mancuernas ligeras para no balancear el cuerpo.",
+      id: 28,
+      nombre: "Press militar con mancuernas",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787291/PRESS_MILITAR_CON_MANCUERNAS_khnggs.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Toma una mancuerna en cada mano, brazos a los lados.",
-        "Eleva los brazos hacia afuera hasta la altura de los hombros.",
-        "Regresa a la posición inicial controlando la bajada.",
-      ],
-    },
-    {
-      id: 12,
-      grupo: "Hombros",
-      nombre: "Face pulls",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022374/image_18_r8hv2w.jpg",
-      descripcion:
-        "Ayuda a la salud del hombro y a trabajar la parte trasera. Se realiza en polea con cuerda.",
-      pasos: [
-        "Ajusta la polea a la altura de la cara, engancha la cuerda.",
-        "Tira de la cuerda hacia el rostro, separando los codos.",
-        "Mantén la espalda recta y control en la bajada.",
-      ],
-    },
-  
-    // Bíceps
-    {
-      id: 13,
-      grupo: "Bíceps",
-      nombre: "Curl con barra",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022709/image_25_l11p49.jpg",
-      descripcion:
-        "Ejercicio básico para el bíceps braquial. Mantén los codos pegados al cuerpo.",
-      pasos: [
-        "Sujeta la barra con las palmas mirando hacia arriba.",
-        "Flexiona los codos elevando la barra hasta la altura del pecho.",
-        "Desciende lentamente hasta estirar el brazo.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 14,
-      grupo: "Bíceps",
-      nombre: "Curl con mancuernas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021675/image_4_hsrtyy.jpg",
-      descripcion:
-        "Variante unilateral o alternada para mayor control y simetría.",
+      id: 44,
+      nombre: "Vuelos laterales",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787226/VUELOS_LATERALES_CON_MANCUERNAS_PARADO_mmajsp.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Sujeta una mancuerna en cada mano.",
-        "Curl alternado o simultáneo, flexionando los codos.",
-        "Baja con control para evitar balanceos.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 15,
-      grupo: "Bíceps",
-      nombre: "Curl martillo",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022426/image_19_lt1ltv.jpg",
-      descripcion:
-        "Enfoca la cara externa del bíceps y braquiorradial. Sostén las mancuernas con agarre neutro.",
+      id: 48,
+      nombre: "Curl bíceps martillo",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787243/CURL_DE_BI%CC%81CEPS_MARTILLO_CON_MANCUERNA_hlflvx.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Mancuernas a los lados, palmas mirando hacia tu cuerpo.",
-        "Eleva una mancuerna manteniendo la posición neutra.",
-        "Desciende lentamente y repite con la otra mano si es alternado.",
-      ],
-    },
-  
-    // Tríceps
-    {
-      id: 16,
-      grupo: "Tríceps",
-      nombre: "Extensión de tríceps en polea",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743021716/image_5_roxqck.jpg",
-      descripcion:
-        "Ideal para aislar el tríceps. Mantén los codos pegados y evita mover los hombros.",
-      pasos: [
-        "Sujeta la barra/cuerda de la polea con las palmas hacia abajo.",
-        "Con los codos cerca del cuerpo, empuja la polea hacia abajo.",
-        "Regresa lentamente sin que los codos se separen del torso.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 17,
-      grupo: "Tríceps",
-      nombre: "Press francés",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022476/image_20_ywqngc.jpg",
-      descripcion:
-        "Se realiza con barra Z o mancuernas, acostado en un banco. Trabaja la cabeza larga del tríceps.",
+      id: 49,
+      nombre: "Curl bíceps con mancuernas",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787255/CURL_DE_BI%CC%81CEPS_CON_MANCUERNA_y7sk9m.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Acuéstate con la barra sujeta en pronación.",
-        "Flexiona los codos bajando la barra hacia la frente.",
-        "Extiende los codos con control hasta la posición inicial.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "maquina-fondos": [
+    {
+      id: 30,
+      nombre: "Fondos de tríceps en máquina",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787291/FONDOS_DE_TRICPES_EN_MAQUINA_id6zga.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "polea-alta": [
+    {
+      id: 31,
+      nombre: "Curl de muñeca en polea alta",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787294/CURL_DE_MUN%CC%83ECA_EN_POLEA_ALTA_tbfduk.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 18,
-      grupo: "Tríceps",
-      nombre: "Fondos en barras paralelas",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022527/image_21_pxmgmt.jpg",
-      descripcion:
-        "Gran ejercicio para la parte posterior del brazo y pecho inferior.",
+      id: 50,
+      nombre: "Jalón al pecho agarre prono",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787271/JALON_AL_PECHO_AGARRE_PRONO_gh8hoc.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Sujeta las barras paralelas y eleva el cuerpo.",
-        "Desciende flexionando los codos hasta sentir estiramiento en tríceps/pecho.",
-        "Empuja hacia arriba extendiendo los codos.",
-      ],
-    },
-  
-    // Abdominales
-    {
-      id: 19,
-      grupo: "Abdominales",
-      nombre: "Crunch",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022567/image_22_vuca5n.jpg",
-      descripcion:
-        "Ejercicio básico de abdomen, enfatiza la parte superior del recto abdominal.",
-      pasos: [
-        "Recuéstate en el suelo con las rodillas flexionadas.",
-        "Eleva ligeramente los hombros llevando el pecho hacia las rodillas.",
-        "Regresa a la posición inicial sin apoyar completamente la cabeza.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 20,
-      grupo: "Abdominales",
-      nombre: "Plancha",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022595/image_23_kr0q0k.jpg",
-      descripcion:
-        "Isométrico para fortalecer todo el core, manteniendo el cuerpo recto.",
+      id: 51,
+      nombre: "Jalón al pecho agarre cerrado",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787273/JALON_AL_PECHO_AGARRE_CERRADO_hvjbhu.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Apoya antebrazos y puntas de los pies en el suelo.",
-        "Mantén la espalda alineada y el abdomen en tensión.",
-        "Resiste la posición el tiempo indicado.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  cardio: [
+    {
+      id: 32,
+      nombre: "Bicicleta fija",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787294/BICICLETA_FIJA_udkg9f.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "maquina-aductores": [
+    {
+      id: 33,
+      nombre: "Aductores en máquina",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787295/ADUCTORES_EN_MAQUINA_lpmqac.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
     {
-      id: 21,
-      grupo: "Abdominales",
-      nombre: "Elevaciones de piernas colgado",
-      imagen: "https://res.cloudinary.com/dfschbyq2/image/upload/v1743022635/image_24_ykfiuc.jpg",
-      descripcion:
-        "Enfoca la parte inferior del recto abdominal. Requiere fuerza de agarre y control del core.",
+      id: 53,
+      nombre: "Abductores en máquina multipiernas",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787256/ABDUCTORES_EN_MAQUINA_MULTIPIERNAS_ndjadj.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
       pasos: [
-        "Cuelga de una barra con los brazos estirados.",
-        "Eleva las rodillas o piernas rectas hasta la cintura o más arriba.",
-        "Baja con control para evitar balanceos.",
-      ],
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
     },
-  ];
-  
+  ],
+  barra: [
+    {
+      id: 34,
+      nombre: "Curl de muñecas con barra",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787294/CURL_DE_MUN%CC%83ECAS_CON_BARRA_mdtnyo.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "poleas": [
+    {
+      id: 35,
+      nombre: "Apertura para pecho en polea",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787295/APERTURAS_PARA_PECHO_EN_POLEA_zuqqyh.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+    {
+      id: 38,
+      nombre: "Apertura pecho baja polea",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787300/APERTURAS_PARA_PECHO_BAJO_EN_POLEA_uftego.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+    {
+      id: 43,
+      nombre: "Remo Gironda agarre cerrado",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787223/REMO_GIRONDA_AGARRE_CERRADO_kepghh.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+    {
+      id: 41,
+      nombre: "Extensión tríceps en polea baja (katana)",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787272/TRI%CC%81CEPS_KATANA_EN_POLEA_BAJA_bjbzzd.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+    {
+      id: 42,
+      nombre: "Curl bíceps en polea baja",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787240/CURL_DE_BI%CC%81CEPS_EN_POLEA_BAJA_exqwou.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+    {
+      id: 56,
+      nombre: "Patada de glúteo en polea baja",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787302/PATADA_DE_GLUTEO_EN_POLEA_BAJA_ahhgqq.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "maquina-femorales": [
+    {
+      id: 36,
+      nombre: "Camilla de femorales",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787299/CAMILLA_DE_FEMORALES_lannc3.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "banco-declinado": [
+    {
+      id: 37,
+      nombre: "Abdominales en banco declinado",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787300/ABDOMINALES_EN_BANCO_DECLINADO_usmg5u.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "banco-olimpico-inclinado": [
+    {
+      id: 39,
+      nombre: "Press pecho inclinado banco olímpico",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787303/PRESS_DE_PECHO_INCLINADO_EN_BANCO_OLIMPICO_offmfj.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  cinta: [
+    {
+      id: 40,
+      nombre: "Cinta caminadora",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787303/CINTA_CAMINADORA_d39kht.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "banco-lumbar": [
+    {
+      id: 43,
+      nombre: "Hiper extensiones banco lumbar",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787236/HIPER_EXTENSIONES_EN_BANCO_LUMBAR_45_mx2uec.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  suelo: [
+    {
+      id: 45,
+      nombre: "Plancha abdominal",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787283/PLANCHA_ABDOMOINAL_b8ipya.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+  "silla-cuadriceps": [
+    {
+      id: 46,
+      nombre: "Silla de cuádriceps",
+      video:
+        "https://res.cloudinary.com/dfschbyq2/video/upload/v1762787274/SILLA_DE_CUA%CC%81DRICEPS_verzdz.mp4",
+      imagen: "",
+      descripcion: "Ejercicio para fortalecer el músculo objetivo manteniendo técnica correcta y control del movimiento.",
+      pasos: [
+        "Ajustá la máquina o posición inicial según sea necesario.",
+        "Mantené el core firme y la espalda recta.",
+        "Realizá el movimiento controlando tanto la fase concéntrica como excéntrica.",
+        "Evitá movimientos bruscos o usar demasiado impulso.",
+        "Respirá de manera fluida durante toda la ejecución."
+      ]
+    },
+  ],
+};

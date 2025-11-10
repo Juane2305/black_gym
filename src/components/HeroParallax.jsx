@@ -9,8 +9,8 @@ export const HeroParallax = () => {
       const isDesktop = window.innerWidth >= 768;
       setBgImage(
         isDesktop
-          ? "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750781583/IMG_5878_zd4vha.webp')" // desktop
-          : "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750782182/IMG_5883_l0nhlm.webp')" // mobile
+          ? "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750781583/IMG_5878_zd4vha.webp')"
+          : "url('https://res.cloudinary.com/dfschbyq2/image/upload/v1750782182/IMG_5883_l0nhlm.webp')"
       );
     };
 
@@ -34,7 +34,7 @@ export const HeroParallax = () => {
         z-40
       "
     >
-      <div className="absolute inset-0 opacity-25 bg-black" />
+      <div className="absolute inset-0 opacity-0 bg-black" />
       <motion.div
         className="relative z-10 text-center px-4 max-w-3xl"
         initial={{ opacity: 0, y: 30 }}

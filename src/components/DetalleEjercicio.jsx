@@ -10,8 +10,9 @@ export const DetalleEjercicio = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const { grupo, id } = useParams();
-  const ejercicio = ejerciciosData.find((ej) => ej.id === parseInt(id));
+  const { maquina, id } = useParams();
+  const ejercicios = ejerciciosData[maquina] || [];
+  const ejercicio = ejercicios.find((ej) => ej.id === parseInt(id));
 
   if (!ejercicio) {
     return (
@@ -30,19 +31,33 @@ export const DetalleEjercicio = () => {
     >
       {/* Botón Volver */}
       <Link
-        to={`/ejercicios/${grupo}`}
-        className="inline-block mb-6 bg-gray-700 hover:bg-gray-600 transition-colors px-4 py-2 rounded"
+        to={`/maquinas/${maquina}`}
+        className="inline-block mb-6 bg-gray-700 hover:bg-gray-600 transition-colors px-4 py-2 rounded mt-28"
       >
         &larr; Volver
       </Link>
 
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">{ejercicio.nombre}</h1>
-        <img
-          src={ejercicio.imagen}
-          alt={ejercicio.nombre}
-          className="w-full h-auto mb-4 rounded"
-        />
+
+        {/* Video del ejercicio */}
+        {ejercicio.video && (
+          <video
+            src={ejercicio.video}
+            controls
+            className="w-full rounded mb-4"
+          />
+        )}
+
+        {/* Imagen de referencia
+        {ejercicio.imagen && (
+          <img
+            src={ejercicio.imagen}
+            alt={ejercicio.nombre}
+            className="w-full h-auto mb-4 rounded"
+          />
+        )} */}
+
         <p className="text-gray-300 mb-4">{ejercicio.descripcion}</p>
 
         <h2 className="text-2xl font-semibold mb-2">Pasos:</h2>

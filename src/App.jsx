@@ -15,8 +15,8 @@ function App() {
       <WhatsAppFloatingButton/>
       <Routes>
         <Route path="/" element={<Main/>}/>
-        <Route path="/ejercicios/:grupo" element={<EjerciciosPorGrupo />} />
-        <Route path="/ejercicios/:grupo/:id" element={<DetalleEjercicio />} />
+        <Route path="/maquinas/:maquina" element={<EjerciciosPorGrupo />} />
+        <Route path="/maquinas/:maquina/:id" element={<DetalleEjercicio />} />
         <Route path="/precios" element={<PlanesBlackGym/>}/>
       </Routes>
       <Footer/>
