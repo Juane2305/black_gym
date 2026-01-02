@@ -5,20 +5,20 @@ function PlanesBlackGym() {
     {
       title: "1 Mes pase libre",
       description: ["Entrenamientos ilimitados", "Horario de entrada libre"],
-      cash: "32.000",
-      precioBase: "35.000",
+      cash: "35.000",
+      precioBase: "40.000",
     },
     {
       title: "3 Meses pase libre",
       description: ["Entrenamientos ilimitados", "Horario de entrada libre"],
-      cash: "90.000",
-      precioBase: "94.000",
+      cash: "95.000",
+      precioBase: "105.000",
     },
     {
       title: "6 Meses pase libre",
       description: ["Entrenamientos ilimitados", "Horario de entrada libre"],
-      cash: "170.000",
-      precioBase: "175.000",
+      cash: "180.000",
+      precioBase: "200.000",
     },
   ];
 
